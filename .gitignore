@@ -1,0 +1,15 @@
+node_modules
+dist
+dist-hostinger.zip
+.env
+.env.local
+test-zip
+wp-content
+wp-includes
+wp-json
+comments
+feed
+*.htm
+xmlrpc.php.html
+webcopy-origin.txt
+.claude

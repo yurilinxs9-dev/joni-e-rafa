@@ -1,0 +1,92 @@
+/* ===== Google Fonts (must be first) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== Custom Fonts ===== */
+@font-face {
+  font-family: 'BRAND';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/Brand.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arolse Belmonteria Script';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/Arolse-Belmonteria-Script-Italic.ttf') format('truetype');
+}
+
+/* ===== CSS Variables (Design Tokens) ===== */
+:root {
+  --gold-1: #b88a2d;
+  --gold-2: #f2e49b;
+  --gold-3: #f6e9b8;
+  --ink: #2b2b2b;
+  --muted: rgba(0, 0, 0, .62);
+  --modal-bg: rgba(0, 0, 0, .85);
+  --white: #ffffff;
+  --cream: #F6F5F1;
+  --cream-2: #F4F1F1;
+  --card-bg: #ffffff;
+  --border: #d8b365;
+  --shadow-big: 0 22px 40px rgba(0, 0, 0, .18);
+  --shadow-soft: 0 12px 24px rgba(0, 0, 0, .10);
+  --shadow: 0 14px 28px rgba(0, 0, 0, .10), 0 8px 12px rgba(0, 0, 0, .06);
+  --frame-bg: #fff;
+  --frame-border: #ffffff;
+  --edge-pad: clamp(6px, 1.5vw, 12px);
+
+  /* Elementor global colors */
+  --e-global-color-primary: #29221B;
+  --e-global-color-secondary: #B6B98E;
+  --e-global-color-text: #928170;
+  --e-global-color-accent: #DCBA70;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--ink);
+  background-color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

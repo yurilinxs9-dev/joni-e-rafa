@@ -1,0 +1,22 @@
+.logo-carousel-section {
+  overflow: hidden;
+  background-color: var(--cream);
+  padding: 10px 0;
+}
+
+.logo-swiper {
+  width: 100%;
+}
+
+.logo-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.logo-carousel-img {
+  width: auto;
+  height: auto;
+  max-height: 80px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+}

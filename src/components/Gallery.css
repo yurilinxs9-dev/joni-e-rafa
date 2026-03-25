@@ -1,0 +1,39 @@
+.gallery-section {
+  overflow: hidden;
+  background-color: var(--cream-2);
+  padding: 20px 0;
+}
+
+.gallery-row {
+  margin-bottom: 10px;
+}
+
+.gallery-row:last-child {
+  margin-bottom: 0;
+}
+
+.gallery-swiper {
+  width: 100%;
+}
+
+.gallery-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.gallery-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 1px solid var(--e-global-color-accent);
+}
+
+@media (max-width: 569px) {
+  .gallery-img {
+    width: 200px;
+    height: 200px;
+  }
+}

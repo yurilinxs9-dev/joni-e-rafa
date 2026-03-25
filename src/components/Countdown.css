@@ -1,0 +1,142 @@
+.cr-section {
+  position: relative;
+  width: 100%;
+  padding-block: clamp(40px, 8vw, 100px);
+  padding-inline: var(--edge-pad);
+  overflow-x: clip;
+  background-color: var(--cream);
+}
+
+.cr-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cr-title-wrap {
+  overflow: visible;
+  display: block;
+  position: relative;
+  gap: clamp(8px, 1.6vw, 16px);
+  margin-bottom: clamp(20px, 6vw, 44px);
+}
+
+.cr-title {
+  margin: 0;
+  font-family: "BRAND", serif;
+  font-size: clamp(42px, 8vw, 120px);
+  letter-spacing: .05em;
+  line-height: 1.02;
+  background: linear-gradient(90deg, var(--gold-1), var(--gold-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+@media (min-width: 901px) {
+  .cr-title {
+    white-space: nowrap;
+    word-break: keep-all;
+    text-wrap: nowrap;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.cr-script {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  width: 100%;
+  text-align: center;
+  font-family: "Arolse Belmonteria Script", cursive;
+  font-size: clamp(60px, 18vw, 200px);
+  line-height: .9;
+  letter-spacing: .02em;
+  color: rgba(0, 0, 0, .06);
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+  filter: blur(.2px);
+}
+
+.cr-sub {
+  margin: 0 auto;
+  font-size: clamp(14px, 2.4vw, 18px);
+  color: rgba(0, 0, 0, .60);
+  text-align: center;
+}
+
+.cr-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(12px, 2vw, 24px);
+  justify-items: center;
+  margin-top: clamp(20px, 5vw, 36px);
+}
+
+.cr-card {
+  position: relative;
+  width: min(260px, 100%);
+  aspect-ratio: 1 / 1.06;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 14px 14px 36px 36px;
+  box-shadow: var(--shadow);
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding: clamp(10px, 2vw, 18px);
+}
+
+.cr-card::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 60% 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .7), rgba(255, 255, 255, 0));
+  border-radius: 12px 12px 0 0;
+  pointer-events: none;
+}
+
+.cr-value {
+  position: relative;
+  z-index: 1;
+  font-family: "BRAND", serif;
+  font-size: clamp(48px, 9vw, 92px);
+  line-height: 1;
+  background: linear-gradient(180deg, var(--gold-1), var(--gold-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cr-label {
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(8px, 1.6vw, 12px);
+  font-size: clamp(12px, 1.8vw, 14px);
+  letter-spacing: .18em;
+  color: rgba(0, 0, 0, .60);
+}
+
+@media (max-width: 1024px) {
+  .cr-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .cr-card { width: 100%; }
+}
+
+@media (max-width: 900px) {
+  .cr-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .cr-title {
+    font-size: clamp(40px, 10vw, 100px);
+    white-space: normal;
+  }
+  .cr-script {
+    transform: translate(-50%, -25%);
+  }
+  .cr-cards { grid-template-columns: 1fr 1fr; gap: 12px; }
+}
